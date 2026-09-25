@@ -92,6 +92,31 @@ export const localBusinessSchema = {
   },
 };
 
+export function citySchema({
+  city,
+  slug,
+}: {
+  city: string;
+  slug: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `Technical Services - ${city}`,
+    description: `Network installation, fiber optic, WiFi, CCTV, and VOIP services in ${city}, UAE.`,
+    url: `${SITE_URL}/${slug}`,
+    telephone: "+971569811332",
+    priceRange: "$$",
+    areaServed: { "@type": "City", name: city },
+    parentOrganization: {
+      "@type": "LocalBusiness",
+      name: "Technical Services",
+      url: SITE_URL,
+    },
+    hasOfferCatalog: localBusinessSchema.hasOfferCatalog,
+  };
+}
+
 export function serviceSchema({
   name,
   description,

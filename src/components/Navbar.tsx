@@ -14,6 +14,8 @@ const links = [
   { href: "/ethernet", label: "Ethernet" },
   { href: "/cctv", label: "CCTV" },
   { href: "/voip", label: "VOIP" },
+  { href: "/al-ain", label: "Al Ain" },
+  { href: "/abu-dhabi", label: "Abu Dhabi" },
 ];
 
 export function Navbar() {

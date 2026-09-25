@@ -4,6 +4,8 @@ import { SITE_URL } from "@/lib/schema";
 const routes = [
   { path: "", priority: 1.0 },
   { path: "/our-services", priority: 0.9 },
+  { path: "/al-ain", priority: 0.9 },
+  { path: "/abu-dhabi", priority: 0.9 },
   { path: "/network-installation", priority: 0.8 },
   { path: "/fiber-optic", priority: 0.8 },
   { path: "/wifi-setup", priority: 0.8 },
