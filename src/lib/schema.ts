@@ -7,21 +7,21 @@ export const localBusinessSchema = {
   description:
     "Expert network cabling & fiber optic installation services in Al Ain & Abu Dhabi",
   image: `${SITE_URL}/og-image.jpg`,
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "Abu Dhabi",
-    addressCountry: "UAE",
-  },
+  url: SITE_URL,
+  // Service-area business: no public street address. Google's local ranking
+  // for SABs relies on areaServed, not a physical storefront address.
+  // Al Ain listed first — current primary market — with UAE-wide coverage.
   areaServed: [
     { "@type": "City", name: "Al Ain" },
     { "@type": "City", name: "Abu Dhabi" },
+    { "@type": "City", name: "Dubai" },
+    { "@type": "City", name: "Sharjah" },
+    { "@type": "City", name: "Ajman" },
+    { "@type": "City", name: "Ras Al Khaimah" },
+    { "@type": "Country", name: "United Arab Emirates" },
   ],
   priceRange: "$$",
   telephone: "+971569811332",
-  sameAs: [
-    "https://www.facebook.com/technicalservices",
-    "https://www.instagram.com/technicalservices",
-  ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
@@ -108,15 +108,15 @@ export function serviceSchema({
     provider: {
       "@type": "LocalBusiness",
       name: "Technical Services",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Al Ain",
-        addressRegion: "Abu Dhabi",
-        addressCountry: "UAE",
-      },
+      url: SITE_URL,
+      telephone: "+971569811332",
     },
     serviceType,
-    areaServed: ["Al Ain", "Abu Dhabi", "UAE"],
+    areaServed: [
+      { "@type": "City", name: "Al Ain" },
+      { "@type": "City", name: "Abu Dhabi" },
+      { "@type": "Country", name: "United Arab Emirates" },
+    ],
     description,
   };
 }

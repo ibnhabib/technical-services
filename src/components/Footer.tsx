@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -64,18 +64,6 @@ export function Footer() {
               <li className="text-slate-600">Saturday: 8:00 AM - 5:00 PM</li>
             </ul>
           </div>
-        </div>
-
-        <div className="flex justify-center space-x-6 mb-8">
-          <a href="#" className="text-slate-600 hover:text-primary">
-            <Facebook className="w-6 h-6" />
-          </a>
-          <a href="#" className="text-slate-600 hover:text-primary">
-            <Instagram className="w-6 h-6" />
-          </a>
-          <a href="#" className="text-slate-600 hover:text-primary">
-            <Linkedin className="w-6 h-6" />
-          </a>
         </div>
 
         <div className="text-center text-slate-600 text-sm">
