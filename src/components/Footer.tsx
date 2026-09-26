@@ -44,8 +44,8 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900 mb-4">Areas We Serve</h3>
             <ul className="space-y-2">
-              <li className="text-slate-600">Al Ain</li>
-              <li className="text-slate-600">Abu Dhabi</li>
+              <li><Link href="/al-ain" className="text-slate-600 hover:text-primary">Al Ain</Link></li>
+              <li><Link href="/abu-dhabi" className="text-slate-600 hover:text-primary">Abu Dhabi</Link></li>
               <li className="text-slate-600">Dubai</li>
               <li className="text-slate-600">Sharjah</li>
               <li className="text-slate-600">Ajman</li>

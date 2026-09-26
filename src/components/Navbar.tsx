@@ -2,24 +2,26 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Wifi } from "lucide-react";
+import { Menu, X, Wifi, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/our-services", label: "Our Services" },
+const serviceLinks = [
   { href: "/network-installation", label: "Network Installation" },
   { href: "/fiber-optic", label: "Fiber Optic" },
   { href: "/wifi-setup", label: "WiFi Setup" },
   { href: "/ethernet", label: "Ethernet" },
   { href: "/cctv", label: "CCTV" },
   { href: "/voip", label: "VOIP" },
+];
+
+const cityLinks = [
   { href: "/al-ain", label: "Al Ain" },
   { href: "/abu-dhabi", label: "Abu Dhabi" },
 ];
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -37,7 +39,40 @@ export function Navbar() {
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">
-            {links.map((link) => (
+            <Link href="/" className="text-slate-700 hover:text-primary font-medium transition-colors">
+              Home
+            </Link>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <Link
+                href="/our-services"
+                className="flex items-center gap-1 text-slate-700 hover:text-primary font-medium transition-colors"
+              >
+                Our Services
+                <ChevronDown className="w-4 h-4" />
+              </Link>
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 pt-2 w-56">
+                  <div className="bg-white rounded-md shadow-lg border border-slate-200 py-2">
+                    {serviceLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-primary transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {cityLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -46,6 +81,7 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+
             <Button
               size="sm"
               className="ml-4"
@@ -66,7 +102,25 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-slate-200 px-4 py-2">
           <nav className="flex flex-col space-y-3 py-4">
-            {links.map((link) => (
+            <Link href="/" className="text-slate-700 hover:text-primary font-medium py-2 transition-colors" onClick={toggleMenu}>
+              Home
+            </Link>
+            <Link href="/our-services" className="text-slate-700 hover:text-primary font-medium py-2 transition-colors" onClick={toggleMenu}>
+              Our Services
+            </Link>
+            <div className="pl-4 flex flex-col space-y-2 border-l-2 border-slate-100">
+              {serviceLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-slate-600 hover:text-primary text-sm py-1 transition-colors"
+                  onClick={toggleMenu}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            {cityLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { PhoneCall, Mail } from 'lucide-react';
 
@@ -26,6 +27,16 @@ export function ServiceCta() {
               </a>
             </Button>
           </div>
+          <p className="text-sm text-slate-500 mt-6">
+            Serving{" "}
+            <Link href="/al-ain" className="text-primary hover:underline">
+              Al Ain
+            </Link>{" "}
+            and{" "}
+            <Link href="/abu-dhabi" className="text-primary hover:underline">
+              Abu Dhabi
+            </Link>
+          </p>
         </div>
       </div>
     </section>

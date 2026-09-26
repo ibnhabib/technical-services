@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Wifi, Cable, Network, Server, Camera, Phone, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
-import { citySchema } from "@/lib/schema";
+import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Technical Services in Al Ain - Network, WiFi, CCTV & Fiber Installation",
@@ -89,6 +89,24 @@ const services = [
   },
 ];
 
+const faqs = [
+  {
+    question: "Do you offer same-day WiFi or network installation in Al Ain?",
+    answer:
+      "Yes, we're based in Al Ain and can usually schedule a same-day site visit for standard installations.",
+  },
+  {
+    question: "Can outdoor CCTV cameras handle Al Ain's summer heat?",
+    answer:
+      "Yes, when installed with the right IP-rated housing and mounting. We cover what actually matters in our guide to outdoor CCTV in Al Ain's heat.",
+  },
+  {
+    question: "Do you cover villa compounds outside central Al Ain?",
+    answer:
+      "Yes, we serve villas and businesses across Al Ain, including larger plots that need multi-point WiFi coverage.",
+  },
+];
+
 export default function AlAinPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -97,6 +115,10 @@ export default function AlAinPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(citySchema({ city: "Al Ain", slug: "al-ain" })),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
       />
 
       <section className="pt-32 pb-16 bg-gradient-to-b from-white to-slate-50">
@@ -155,6 +177,45 @@ export default function AlAinPage() {
                 Being based locally means faster response &mdash; for both new installations and
                 repairs. Contact us for a free consultation on your Al Ain property.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mb-8 text-3xl font-bold tracking-tight text-slate-900">
+              Frequently asked questions
+            </h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 pt-6 border-t border-slate-200">
+              <p className="text-slate-600 mb-2">Related guides:</p>
+              <ul className="space-y-1">
+                <li>
+                  <Link
+                    href="/guides/wifi-dead-zones-al-ain-villas"
+                    className="text-primary hover:underline"
+                  >
+                    Fixing WiFi Dead Zones in Al Ain Villas
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/guides/outdoor-cctv-heat-al-ain"
+                    className="text-primary hover:underline"
+                  >
+                    How Al Ain&apos;s Heat Affects Outdoor CCTV Equipment
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

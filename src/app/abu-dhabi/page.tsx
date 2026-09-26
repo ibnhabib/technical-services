@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Wifi, Cable, Network, Server, Camera, Phone, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
-import { citySchema } from "@/lib/schema";
+import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Technical Services in Abu Dhabi - Network, WiFi, CCTV & Fiber Installation",
@@ -89,6 +89,24 @@ const services = [
   },
 ];
 
+const faqs = [
+  {
+    question: "Do you install network cabling in Abu Dhabi apartments and towers?",
+    answer:
+      "Yes, including riser and trunking work for commercial towers and in-unit CAT 6 cabling for apartment fit-outs.",
+  },
+  {
+    question: "Can you fix WiFi interference in high-rise buildings?",
+    answer:
+      "Yes, dense buildings often have overlapping WiFi networks from neighboring units. We plan channel selection and access point placement around this.",
+  },
+  {
+    question: "Do you work around office hours for business installations?",
+    answer:
+      "Yes, we schedule CCTV and network installs around your operating hours and building management rules to avoid disrupting your business day.",
+  },
+];
+
 export default function AbuDhabiPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -97,6 +115,10 @@ export default function AbuDhabiPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(citySchema({ city: "Abu Dhabi", slug: "abu-dhabi" })),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }}
       />
 
       <section className="pt-32 pb-16 bg-gradient-to-b from-white to-slate-50">
@@ -153,6 +175,24 @@ export default function AbuDhabiPage() {
               <p className="text-slate-700 mb-4">
                 Contact us for a free consultation on your Abu Dhabi property, home, or office.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mb-8 text-3xl font-bold tracking-tight text-slate-900">
+              Frequently asked questions
+            </h2>
+            <div className="space-y-6">
+              {faqs.map((faq) => (
+                <div key={faq.question}>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{faq.question}</h3>
+                  <p className="text-slate-600">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
