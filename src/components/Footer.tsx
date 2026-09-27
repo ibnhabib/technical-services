@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-4">Technical Services</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Link and Cross link Technology</h3>
             <p className="text-slate-600 mb-4">
               Professional network cabling and installation services in Al Ain and Abu Dhabi.
             </p>
