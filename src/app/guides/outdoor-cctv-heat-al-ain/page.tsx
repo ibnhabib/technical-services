@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { TrackedLink } from "@/components/TrackedLink";
 import { PhoneCall } from "lucide-react";
 import { SITE_URL } from "@/lib/schema";
 
@@ -100,10 +101,10 @@ export default function OutdoorCctvHeatGuide() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="gap-2" asChild>
-                <a href="tel:+971569811332">
+                <TrackedLink href="tel:+971569811332" location="guide_cctv">
                   <PhoneCall className="h-5 w-5" />
                   Call Now
-                </a>
+                </TrackedLink>
               </Button>
               <Button variant="outline" asChild>
                 <Link href="/cctv">See our CCTV installation service</Link>

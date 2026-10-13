@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { TrackedLink } from '@/components/TrackedLink';
 import { Button } from '@/components/ui/button';
 import { PhoneCall, Mail } from 'lucide-react';
 
@@ -15,10 +16,10 @@ export function ServiceCta() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="gap-2" asChild>
-              <a href="tel:+971569811332">
+              <TrackedLink href="tel:+971569811332" location="service_cta">
                 <PhoneCall className="h-5 w-5" />
                 Call Now
-              </a>
+              </TrackedLink>
             </Button>
             <Button variant="outline" className="gap-2" asChild>
               <a href="mailto:info@technicalservices.ae">

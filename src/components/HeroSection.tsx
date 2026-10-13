@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import { TrackedLink } from "./TrackedLink";
 import { Wifi } from "lucide-react";
 import Link from "next/link";
 
@@ -43,8 +44,10 @@ export function HeroSection() {
             Same-Day WiFi Setup, NETGEAR Extender Installation, and Reliable Fiber Repairs
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
-            <Button size="lg" className="animate-fade-in hover:bg-primary/90" onClick={() => window.location.href = 'tel:+971569811332'}>
-              Get Free Consultation Today
+            <Button size="lg" className="animate-fade-in hover:bg-primary/90" asChild>
+              <TrackedLink href="tel:+971569811332" location="hero">
+                Get Free Consultation Today
+              </TrackedLink>
             </Button>
             <Link href="/our-services">
               <Button size="lg" variant="outline" className="animate-fade-in">

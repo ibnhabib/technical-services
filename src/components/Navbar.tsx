@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Wifi, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
+import { TrackedLink } from "./TrackedLink";
 
 const serviceLinks = [
   { href: "/network-installation", label: "Network Installation" },
@@ -82,12 +83,10 @@ export function Navbar() {
               </Link>
             ))}
 
-            <Button
-              size="sm"
-              className="ml-4"
-              onClick={() => (window.location.href = "tel:+971569811332")}
-            >
-              Call Now
+            <Button size="sm" className="ml-4" asChild>
+              <TrackedLink href="tel:+971569811332" location="navbar">
+                Call Now
+              </TrackedLink>
             </Button>
           </nav>
 
@@ -130,12 +129,10 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Button
-              size="sm"
-              className="mt-4 w-full"
-              onClick={() => (window.location.href = "tel:+971564836102")}
-            >
-              Call Now
+            <Button size="sm" className="mt-4 w-full" asChild>
+              <TrackedLink href="tel:+971564836102" location="navbar_mobile">
+                Call Now
+              </TrackedLink>
             </Button>
           </nav>
         </div>
