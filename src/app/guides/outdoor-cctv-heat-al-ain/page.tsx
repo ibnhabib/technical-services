@@ -54,7 +54,7 @@ export default function OutdoorCctvHeatGuide() {
           />
 
           <div className="max-w-3xl mx-auto prose prose-lg">
-            <h2>What Al Ain's climate does to outdoor equipment</h2>
+            <h2>What Al Ain&apos;s climate does to outdoor equipment</h2>
             <p>
               Al Ain regularly sees surface and enclosure temperatures well above what most
               consumer CCTV equipment is rated for in direct summer sun, plus fine dust that
@@ -86,7 +86,7 @@ export default function OutdoorCctvHeatGuide() {
               entry point matters as much as the housing rating on the box.
             </p>
 
-            <h2>Maintenance that's worth doing</h2>
+            <h2>Maintenance that&apos;s worth doing</h2>
             <p>
               An annual check of seals, mounting hardware, and housing integrity before peak
               summer catches problems while they&apos;re still cheap to fix &mdash; a

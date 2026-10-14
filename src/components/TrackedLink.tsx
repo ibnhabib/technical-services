@@ -8,15 +8,14 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 export function TrackedLink({ location, onClick, children, ...rest }: Props) {
-  const method = rest.href.startsWith("tel:") ? "phone_click" : "whatsapp_click";
+  const event = rest.href.startsWith("tel:") ? "phone_click" : "whatsapp_click";
   return (
     <a
       {...rest}
       onClick={(e) => {
         const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
-        w.dataLayer = w.dataLayer || [];
-        w.dataLayer.push({
-          event: method,
+        (w.dataLayer ??= []).push({
+          event,
           contact_location: location,
           contact_destination: rest.href,
         });
