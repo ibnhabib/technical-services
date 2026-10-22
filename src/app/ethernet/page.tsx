@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Ethernet & Home Networking",
-  description: `Professional ethernet and home networking solutions in Al Ain and Abu Dhabi. We provide high-speed ethernet cabling, smart home configuration, and professional cable management for reliable home networks.`,
+  description: "Ethernet and home networking in Al Ain and Abu Dhabi: high-speed cabling, smart home setup and neat cable management for reliable home networks.",
   keywords: ["ethernet installation","home networking","structured cabling","smart home","high-speed internet","cable management","Al Ain","Abu Dhabi","network cabling"],
   alternates: { canonical: "/ethernet" },
+  openGraph: ogMeta("/ethernet"),
 };
 
 const content = [

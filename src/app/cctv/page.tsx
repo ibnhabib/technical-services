@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "CCTV Installation",
-  description: `Professional CCTV and security camera installation services in Al Ain and Abu Dhabi. We provide HD and 4K camera systems with night vision and remote monitoring capabilities for homes and businesses.`,
+  description: "CCTV and security camera installation in Al Ain and Abu Dhabi. HD and 4K cameras with night vision and remote viewing for homes and businesses.",
   keywords: ["CCTV installation","security cameras","surveillance systems","night vision cameras","remote monitoring","HD cameras","4K cameras","Al Ain","Abu Dhabi"],
   alternates: { canonical: "/cctv" },
+  openGraph: ogMeta("/cctv"),
 };
 
 const content = [

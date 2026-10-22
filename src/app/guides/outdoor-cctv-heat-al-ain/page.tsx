@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/TrackedLink";
@@ -6,10 +7,11 @@ import { PhoneCall } from "lucide-react";
 import { SITE_URL } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "How Al Ain's Heat Affects Outdoor CCTV Equipment",
+  title: "Outdoor CCTV in Al Ain's Heat",
   description:
     "Why outdoor security cameras fail faster in Al Ain's heat and dust, and what housing, ventilation, and IP ratings actually prevent it.",
   alternates: { canonical: "/guides/outdoor-cctv-heat-al-ain" },
+  openGraph: ogMeta("/guides/outdoor-cctv-heat-al-ain"),
 };
 
 const articleSchema = {

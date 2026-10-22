@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Fiber Optic Solutions",
-  description: `Professional fiber optic installations and repairs in Al Ain and Abu Dhabi. Our expert technicians provide residential and commercial fiber solutions with 24/7 emergency support.`,
+  description: "Fiber optic installation and repair in Al Ain and Abu Dhabi. Residential and commercial fiber work with 24/7 emergency support.",
   keywords: ["fiber optic","fiber cable installation","FTTH","fiber to the home","fiber optic repairs","high-speed internet","Al Ain","Abu Dhabi","network cabling"],
   alternates: { canonical: "/fiber-optic" },
+  openGraph: ogMeta("/fiber-optic"),
 };
 
 const content = [

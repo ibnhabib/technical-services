@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "VOIP Solutions",
-  description: `Professional VOIP and telephony solutions for businesses in Al Ain and Abu Dhabi. We provide business phone system setup, cloud PBX integration, and comprehensive call center solutions.`,
+  description: "VOIP and telephony for businesses in Al Ain and Abu Dhabi: business phone system setup, cloud PBX and call center solutions.",
   keywords: ["VOIP","voice over IP","business phone system","cloud PBX","call center solutions","telephony","Al Ain","Abu Dhabi","phone installation"],
   alternates: { canonical: "/voip" },
+  openGraph: ogMeta("/voip"),
 };
 
 const content = [

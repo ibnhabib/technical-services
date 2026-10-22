@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Professional Network Installation",
-  description: `Professional network installation services with CAT 6 cable installation and structured cabling solutions for businesses and homes in Al Ain and Abu Dhabi. Expert technicians and reliable service.`,
+  description: "Network installation in Al Ain and Abu Dhabi: CAT 6 and structured cabling for businesses and homes by expert technicians.",
   keywords: ["network installation","CAT 6 cable installation","structured cabling","network infrastructure","Al Ain","Abu Dhabi","network cabling","internet cable installation"],
   alternates: { canonical: "/network-installation" },
+  openGraph: ogMeta("/network-installation"),
 };
 
 const content = [

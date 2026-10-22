@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { Wifi, Cable, Network, Server, Camera, Phone, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
 import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Technical Services in Al Ain - Network, WiFi, CCTV & Fiber Installation",
+  title: "Technical Services in Al Ain",
   description:
-    "Based in Al Ain: network cabling, fiber optic repair, WiFi setup, CCTV installation, and VOIP services for homes and businesses across Al Ain. Same-day response.",
+    "Based in Al Ain: network cabling, fiber optic repair, WiFi setup, CCTV and VOIP for homes and businesses across the city. Same-day call-outs.",
   keywords: [
     "technical services al ain",
     "network installation al ain",
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     "voip al ain",
   ],
   alternates: { canonical: "/al-ain" },
+  openGraph: ogMeta("/al-ain"),
 };
 
 const services = [
@@ -146,6 +148,7 @@ export default function AlAinPage() {
 
       <section className="py-16 bg-white">
         <div className="container px-4 mx-auto">
+          <h2 className="sr-only">Services in Al Ain</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link href={service.url} key={service.url} className="group">

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { Wifi, Cable, Network, Server, Camera, Phone } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
 
 export const metadata: Metadata = {
-  title: "Our Services - Technical Solutions in Al Ain & Abu Dhabi",
+  title: "Our Services - Network, WiFi & CCTV",
   description:
-    "Explore our comprehensive technical services including network installation, fiber optic solutions, WiFi setup, ethernet cabling, CCTV installation, and VOIP services in Al Ain & Abu Dhabi.",
+    "All our services in one place: network cabling, fiber optic, WiFi, ethernet, CCTV and VOIP for Al Ain and Abu Dhabi homes and businesses.",
   keywords: [
     "technical services",
     "network installation",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     "Abu Dhabi",
   ],
   alternates: { canonical: "/our-services" },
+  openGraph: ogMeta("/our-services"),
 };
 
 const services = [
@@ -108,6 +110,7 @@ export default function OurServicesPage() {
 
       <section className="py-16 bg-white">
         <div className="container px-4 mx-auto">
+          <h2 className="sr-only">Our services</h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link href={service.url} key={service.url} className="group">

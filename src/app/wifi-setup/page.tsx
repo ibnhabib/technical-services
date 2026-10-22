@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "WiFi & Networking Setup",
-  description: `Professional WiFi installation and networking setup services in Al Ain and Abu Dhabi. We provide seamless wireless solutions for homes and businesses with NETGEAR extender optimization and IoT device integration.`,
+  description: "Professional WiFi installation and networking setup in Al Ain and Abu Dhabi. NETGEAR extender tuning and IoT integration for homes and businesses.",
   keywords: ["wifi installation","wireless network setup","NETGEAR extender","mesh wifi","wifi coverage","Al Ain","Abu Dhabi","home networking","internet installation"],
   alternates: { canonical: "/wifi-setup" },
+  openGraph: ogMeta("/wifi-setup"),
 };
 
 const content = [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/TrackedLink";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   description:
     "Why large Al Ain villas get WiFi dead zones and how mesh systems, wired backhaul, and access point placement fix them.",
   alternates: { canonical: "/guides/wifi-dead-zones-al-ain-villas" },
+  openGraph: ogMeta("/guides/wifi-dead-zones-al-ain-villas"),
 };
 
 const articleSchema = {

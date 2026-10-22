@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogMeta } from "@/lib/seo";
 import { Wifi, Cable, Network, Server, Camera, Phone } from "lucide-react";
 import Link from "next/link";
 import { HeroSection } from "@/components/HeroSection";
@@ -6,9 +7,9 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 
 export const metadata: Metadata = {
-  title: "Technical Services - Network Installation & WiFi Setup in Al Ain & Abu Dhabi",
+  title: "Technical Services - Network & WiFi Installation in Al Ain",
   description:
-    "Professional network installation, fiber optic, WiFi setup, ethernet, CCTV, and VOIP services in Al Ain & Abu Dhabi. Expert technical solutions for homes and businesses.",
+    "Network installation, fiber optic, WiFi setup, ethernet, CCTV and VOIP services for homes and businesses in Al Ain and Abu Dhabi.",
   keywords: [
     "network cabling",
     "CAT 6 cable installation",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "Abu Dhabi",
   ],
   alternates: { canonical: "/" },
+  openGraph: ogMeta("/"),
 };
 
 const services = [
