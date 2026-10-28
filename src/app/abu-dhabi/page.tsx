@@ -6,7 +6,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Technical Services in Abu Dhabi",
+  title: { absolute: "Technical Services in Abu Dhabi" },
   description:
     "Network cabling, fiber optic repair, WiFi setup, CCTV and VOIP for apartments, villas and offices across Abu Dhabi. Fast, professional call-outs.",
   keywords: [

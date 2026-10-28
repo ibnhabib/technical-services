@@ -4,7 +4,7 @@ import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Ethernet & Home Networking",
+  title: "Ethernet Cabling & Home Networking",
   description: "Ethernet and home networking in Al Ain and Abu Dhabi: high-speed cabling, smart home setup and neat cable management for reliable home networks.",
   keywords: ["ethernet installation","home networking","structured cabling","smart home","high-speed internet","cable management","Al Ain","Abu Dhabi","network cabling"],
   alternates: { canonical: "/ethernet" },
@@ -31,7 +31,7 @@ const features = [
 export default function EthernetPage() {
   return (
     <ServicePage
-      title="Ethernet & Home Networking"
+      title="Ethernet Cabling & Home Networking"
       description={`Complete home networking solutions with high-speed ethernet cabling and smart home configuration in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

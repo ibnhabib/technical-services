@@ -4,7 +4,7 @@ import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "WiFi & Networking Setup",
+  title: "WiFi Installation Services",
   description: "Professional WiFi installation and networking setup in Al Ain and Abu Dhabi. NETGEAR extender tuning and IoT integration for homes and businesses.",
   keywords: ["wifi installation","wireless network setup","NETGEAR extender","mesh wifi","wifi coverage","Al Ain","Abu Dhabi","home networking","internet installation"],
   alternates: { canonical: "/wifi-setup" },
@@ -31,10 +31,11 @@ const features = [
 export default function WifiSetupPage() {
   return (
     <ServicePage
-      title="WiFi & Networking Setup"
+      title="WiFi Installation & Networking Setup"
       description={`Seamless wireless solutions for optimal coverage in homes and offices across Al Ain and Abu Dhabi.`}
       content={content}
       features={features}
+      relatedGuide={{ href: "/guides/wifi-dead-zones-al-ain-villas", title: "Fixing WiFi Dead Zones in Al Ain Villas" }}
       imageUrl="https://images.unsplash.com/photo-1531765408077-9a1f85f90df1?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp"
       schemaData={serviceSchema({
         name: "WiFi & Networking Setup",

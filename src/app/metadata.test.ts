@@ -28,9 +28,13 @@ const pages: [string, Metadata][] = [
   ["/guides/wifi-dead-zones-al-ain-villas", wifiGuide],
 ];
 
-// The root layout adds " | Technical Services" to every title except the homepage's.
-const rendered = (path: string, m: Metadata) =>
-  path === "/" ? String(m.title) : `${m.title} | Technical Services`;
+// The root layout adds " | Technical Services" to every title except the homepage's
+// and titles that opt out with { absolute }.
+const rendered = (path: string, m: Metadata) => {
+  const t = m.title;
+  if (typeof t === "object" && t && "absolute" in t) return String(t.absolute);
+  return path === "/" ? String(t) : `${t} | Technical Services`;
+};
 
 describe.each(pages)("metadata for %s", (path, m) => {
   it("title is at most 60 characters as rendered", () => {
@@ -51,6 +55,21 @@ describe.each(pages)("metadata for %s", (path, m) => {
     expect(m.openGraph?.url).toBe(path);
     expect(m.openGraph).toMatchObject({ type: "website", siteName: "Technical Services" });
     expect(m.openGraph?.images).toBeDefined();
+  });
+});
+
+describe("titles match the words people search", () => {
+  it("wifi-setup says 'installation', not only 'setup'", () => {
+    expect(rendered("/wifi-setup", wifi)).toMatch(/WiFi Installation/i);
+  });
+
+  it("ethernet says 'cabling'", () => {
+    expect(rendered("/ethernet", ethernet)).toMatch(/cabling/i);
+  });
+
+  it("city pages do not repeat the brand name", () => {
+    expect(rendered("/al-ain", alAin)).toBe("Technical Services in Al Ain");
+    expect(rendered("/abu-dhabi", abuDhabi)).toBe("Technical Services in Abu Dhabi");
   });
 });
 

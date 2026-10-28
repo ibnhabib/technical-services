@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ServiceHero } from './ServiceHero';
 import { ServiceContent } from './ServiceContent';
 import { ServiceFeatures } from './ServiceFeatures';
@@ -10,6 +11,7 @@ interface ServicePageProps {
   features: string[];
   imageUrl: string;
   schemaData: Record<string, unknown>;
+  relatedGuide?: { href: string; title: string };
 }
 
 export function ServicePage({
@@ -18,7 +20,8 @@ export function ServicePage({
   content,
   features,
   imageUrl,
-  schemaData
+  schemaData,
+  relatedGuide
 }: ServicePageProps) {
   return (
     <div className="min-h-screen bg-white">
@@ -28,6 +31,14 @@ export function ServicePage({
       />
       <ServiceHero title={title} description={description} imageUrl={imageUrl} />
       <ServiceContent content={content} />
+      {relatedGuide && (
+        <p className="max-w-3xl mx-auto px-4 pb-8 text-slate-600">
+          Related guide:{' '}
+          <Link href={relatedGuide.href} className="text-primary hover:underline">
+            {relatedGuide.title}
+          </Link>
+        </p>
+      )}
       <ServiceFeatures title="Key Features & Benefits" features={features} />
       <ServiceCta />
     </div>

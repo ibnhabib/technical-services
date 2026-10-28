@@ -35,10 +35,15 @@ export function Footer() {
             <ul className="space-y-2">
               <li><Link href="/network-installation" className="text-slate-600 hover:text-primary">Network Installation</Link></li>
               <li><Link href="/fiber-optic" className="text-slate-600 hover:text-primary">Fiber Optic Solutions</Link></li>
-              <li><Link href="/wifi-setup" className="text-slate-600 hover:text-primary">WiFi & Networking Setup</Link></li>
-              <li><Link href="/ethernet" className="text-slate-600 hover:text-primary">Ethernet & Home Networking</Link></li>
+              <li><Link href="/wifi-setup" className="text-slate-600 hover:text-primary">WiFi Installation & Networking</Link></li>
+              <li><Link href="/ethernet" className="text-slate-600 hover:text-primary">Ethernet Cabling & Home Networking</Link></li>
               <li><Link href="/cctv" className="text-slate-600 hover:text-primary">CCTV Installation</Link></li>
               <li><Link href="/voip" className="text-slate-600 hover:text-primary">VOIP Solutions</Link></li>
+            </ul>
+            <h3 className="text-lg font-bold text-slate-900 mt-6 mb-4">Guides</h3>
+            <ul className="space-y-2">
+              <li><Link href="/guides/wifi-dead-zones-al-ain-villas" className="text-slate-600 hover:text-primary">WiFi Dead Zones in Al Ain Villas</Link></li>
+              <li><Link href="/guides/outdoor-cctv-heat-al-ain" className="text-slate-600 hover:text-primary">Outdoor CCTV in Al Ain&apos;s Heat</Link></li>
             </ul>
           </div>
 

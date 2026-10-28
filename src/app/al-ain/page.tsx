@@ -6,7 +6,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Technical Services in Al Ain",
+  title: { absolute: "Technical Services in Al Ain" },
   description:
     "Based in Al Ain: network cabling, fiber optic repair, WiFi setup, CCTV and VOIP for homes and businesses across the city. Same-day call-outs.",
   keywords: [
