@@ -8,7 +8,7 @@ import { citySchema, faqSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: { absolute: "Technical Services in Abu Dhabi" },
   description:
-    "Network cabling, fiber optic repair, WiFi setup, CCTV and VOIP for apartments, villas and offices across Abu Dhabi. Fast, professional call-outs.",
+    "Network installation and troubleshooting in Abu Dhabi: cabling, fiber repair, WiFi, CCTV and VOIP for apartments, villas and offices. Fast call-outs.",
   keywords: [
     "technical services abu dhabi",
     "network installation abu dhabi",
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
 const services = [
   {
     icon: Network,
-    title: "Network Installation",
-    description: "Structured cabling for apartments, offices, and towers in Abu Dhabi",
+    title: "Network Installation & Troubleshooting",
+    description: "Structured cabling and fault-finding for apartments, offices, and towers in Abu Dhabi",
     highlights: [
       "CAT 6 runs for apartment and office fit-outs",
       "Riser and trunking work for commercial towers",
-      "Clean, labelled patch panel installs",
+      "Fault-finding on slow, dropping or dead networks",
     ],
     url: "/network-installation",
   },
@@ -107,6 +107,11 @@ const faqs = [
     answer:
       "Yes, we schedule CCTV and network installs around your operating hours and building management rules to avoid disrupting your business day.",
   },
+  {
+    question: "Can you troubleshoot a slow or dropping network in Abu Dhabi?",
+    answer:
+      "Yes. We test the cables, check link speed on each port, look at WiFi channels and signal, and isolate the fault, whether it is a bad termination, a failing switch port or interference from neighboring networks. We then repair it or tell you what needs replacing.",
+  },
 ];
 
 export default function AbuDhabiPage() {
@@ -167,9 +172,9 @@ export default function AbuDhabiPage() {
             <div className="prose prose-lg max-w-none">
               <p className="text-slate-700 mb-4">
                 Abu Dhabi&apos;s mix of high-rise apartments, villas, and commercial towers each
-                need a different approach to cabling and WiFi &mdash; a setup that works in a
-                Khalidiya tower won&apos;t work the same way in a Khalifa City villa. We plan
-                around the building, not a generic template.
+                need a different approach to cabling and WiFi. A setup that works in a
+                Khalidiya tower won&apos;t work the same way in a Khalifa City villa, so we plan
+                around the building instead of using a template.
               </p>
               <p className="text-slate-700 mb-4">
                 For offices and retail units, we work around your operating hours and building
@@ -184,6 +189,38 @@ export default function AbuDhabiPage() {
       </section>
 
       <section className="py-16 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900">
+              Network troubleshooting in Abu Dhabi
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 mb-4">
+                Most network complaints in Abu Dhabi come from a short list of causes. In towers,
+                dozens of neighboring routers crowd the same WiFi channels, so a connection that
+                tested fine last month slows to a crawl. In older fit-outs, badly terminated
+                cable drops to 100 Mbps or loses packets. A switch port can fail, a PoE camera
+                can reboot because the cable is too long, and a second router can hand out the
+                same addresses and knock devices offline.
+              </p>
+              <p className="text-slate-700 mb-4">
+                We work through it in order. First we test the cable run with a tester and check
+                the link speed on the port. Then we look at the switch, the router settings and
+                the WiFi channel plan. Fiber faults usually turn out to be a dirty connector or a
+                tight bend, which we clean or re-terminate. You get a plain answer on what was
+                wrong and what fixed it.
+              </p>
+              <p className="text-slate-700 mb-4">
+                Troubleshooting visits cover homes in Khalifa City and Khalidiya, offices on Abu
+                Dhabi island, and warehouse units in Mussafah. If the network is too old
+                to repair sensibly, we quote a clean re-cable instead of patching it again.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-slate-50">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto">
             <h2 className="mb-8 text-3xl font-bold tracking-tight text-slate-900">

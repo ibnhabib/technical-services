@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, render } from "@testing-library/react";
 import NetworkInstallationPage, { metadata as network } from "./network-installation/page";
 import EthernetPage from "./ethernet/page";
+import AbuDhabiPage, { metadata as abuDhabi } from "./abu-dhabi/page";
 
 afterEach(cleanup);
 
@@ -37,9 +38,24 @@ describe("/ethernet copy", () => {
   });
 });
 
+describe("/abu-dhabi copy", () => {
+  it("description says 'troubleshooting'", () => {
+    expect(String(abuDhabi.description)).toMatch(/troubleshooting/i);
+  });
+
+  it("has a troubleshooting heading, an FAQ on it and real depth", () => {
+    const { container } = render(<AbuDhabiPage />);
+    const h = [...container.querySelectorAll("h2, h3")].map((e) => e.textContent ?? "");
+    expect(h.some((t) => /network troubleshooting/i.test(t))).toBe(true);
+    expect(h.some((t) => /troubleshoot/i.test(t) && t.endsWith("?"))).toBe(true);
+    expect(words(container.textContent ?? "")).toBeGreaterThanOrEqual(550);
+  });
+});
+
 describe("em dashes", () => {
   it("copy has none", () => {
     expect(text(<NetworkInstallationPage />)).not.toMatch(/[—–]/);
     expect(text(<EthernetPage />)).not.toMatch(/[—–]/);
+    expect(text(<AbuDhabiPage />)).not.toMatch(/[—–]/);
   });
 });
