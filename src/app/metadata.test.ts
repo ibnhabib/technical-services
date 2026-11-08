@@ -68,7 +68,7 @@ describe("titles match the words people search", () => {
   });
 
   it("city pages do not repeat the brand name", () => {
-    expect(rendered("/al-ain", alAin)).toBe("Technical Services in Al Ain");
+    expect(rendered("/al-ain", alAin)).toBe("Network, WiFi & CCTV Installation in Al Ain");
     expect(rendered("/abu-dhabi", abuDhabi)).toBe("Technical Services in Abu Dhabi");
   });
 });

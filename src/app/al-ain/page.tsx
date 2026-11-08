@@ -6,9 +6,9 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: { absolute: "Technical Services in Al Ain" },
+  title: { absolute: "Network, WiFi & CCTV Installation in Al Ain" },
   description:
-    "Based in Al Ain: network cabling, fiber optic repair, WiFi setup, CCTV and VOIP for homes and businesses across the city. Same-day call-outs.",
+    "Local Al Ain team for network cabling, WiFi, CCTV, fiber repair and VOIP in villas, shops and offices. Same-day call-outs and troubleshooting.",
   keywords: [
     "technical services al ain",
     "network installation al ain",
@@ -107,6 +107,21 @@ const faqs = [
     answer:
       "Yes, we serve villas and businesses across Al Ain, including larger plots that need multi-point WiFi coverage.",
   },
+  {
+    question: "Do you install internet cabling after e& or du connects fibre to my Al Ain villa?",
+    answer:
+      "Yes. The provider brings fibre to a box in your property and installs a router. We take it from there: we run cable from that point to each room, place the router or access points where coverage is needed, and test every point.",
+  },
+  {
+    question: "Can you wire a majlis, an annex or an outdoor room?",
+    answer:
+      "Yes. For a room inside the main house we run CAT 6 through the roof void or conduit. For a separate annex or guest house we use a fibre link or UV-rated outdoor cable, depending on the distance.",
+  },
+  {
+    question: "Can you troubleshoot a slow or dropping network in Al Ain?",
+    answer:
+      "Yes. We test the cable runs, check the speed on each port, review the WiFi coverage and find the fault. In older villas the cause is often cabling that has aged in a hot roof void or a router in the wrong place.",
+  },
 ];
 
 export default function AlAinPage() {
@@ -131,7 +146,7 @@ export default function AlAinPage() {
               <span className="font-medium">Al Ain, United Arab Emirates</span>
             </div>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-              Technical Services in Al Ain
+              Network, WiFi and CCTV Installation in Al Ain
             </h1>
             <p className="mx-auto mb-8 text-xl leading-relaxed text-slate-600 max-w-2xl">
               We&apos;re based in Al Ain, so a technician can usually reach your villa, office,
@@ -169,7 +184,7 @@ export default function AlAinPage() {
               <p className="text-slate-700 mb-4">
                 Al Ain&apos;s villa communities and larger plot sizes mean a standard router
                 rarely covers the whole property. We plan WiFi and cabling around your actual
-                layout &mdash; garden, majlis, and all &mdash; instead of a one-size-fits-all setup.
+                layout, garden and majlis included, instead of a one-size-fits-all setup.
               </p>
               <p className="text-slate-700 mb-4">
                 Outdoor equipment in Al Ain has to handle real heat and dust. Our CCTV and
@@ -177,10 +192,59 @@ export default function AlAinPage() {
                 not calling us back every summer.
               </p>
               <p className="text-slate-700 mb-4">
-                Being based locally means faster response &mdash; for both new installations and
+                Being based locally means faster response, for both new installations and
                 repairs. Contact us for a free consultation on your Al Ain property.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900">
+              Internet and network installation in Al Ain
+            </h2>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-slate-700 mb-4">
+                When e&amp; or du connects fibre to a villa, the job stops at a box near the
+                entrance and a single router. That is rarely where the signal is needed. Our{" "}
+                <Link href="/network-installation" className="text-primary hover:underline">
+                  networking installation services
+                </Link>{" "}
+                carry it from that box to every room, with a cable to each wall point and a patch
+                panel and switch that keep the network tidy and easy to change.
+              </p>
+              <p className="text-slate-700 mb-4">
+                For homes, the usual plan is wired points in the majlis, the home office, the
+                living room and the bedrooms, plus ceiling access points powered over the same
+                cable. Our{" "}
+                <Link href="/ethernet" className="text-primary hover:underline">
+                  residential networking and ethernet cabling
+                </Link>{" "}
+                page covers how that works. For shops, offices and warehouses we add a small rack,
+                a PoE switch and spare ports, so IP cameras, phones and access points share one
+                well-labelled network.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-slate-50">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="mb-6 text-3xl font-bold tracking-tight text-slate-900">
+              Where we work in Al Ain
+            </h2>
+            <p className="text-slate-700 mb-4">
+              We take jobs across the city and its surrounding districts, including Al Jimi, Al
+              Mutawaa, Al Khabisi, Zakher, Al Towayya, Hili, Al Markhaniya, Falaj Hazza, Al Muwaiji
+              and Al Sarooj, as well as the industrial area. Villas, apartments, shops, offices and
+              warehouses all get the same approach: look at the building first, then plan the
+              cable and equipment around it.
+            </p>
           </div>
         </div>
       </section>
