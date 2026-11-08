@@ -4,41 +4,44 @@ import { ServicePage } from "@/components/service/ServicePage";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Professional Network Installation",
-  description: "Network installation in Al Ain and Abu Dhabi: CAT 6 and structured cabling for businesses and homes by expert technicians.",
-  keywords: ["network installation","CAT 6 cable installation","structured cabling","network infrastructure","Al Ain","Abu Dhabi","network cabling","internet cable installation"],
+  title: "Networking Installation Services",
+  description: "Networking installation services in Al Ain and Abu Dhabi: CAT 6 and CAT 6A structured cabling, switches and racks for homes, offices and warehouses.",
+  keywords: ["networking installation services","network installation","CAT 6 cable installation","CAT 6A","structured cabling","network cabling","Al Ain","Abu Dhabi","internet cable installation"],
   alternates: { canonical: "/network-installation" },
   openGraph: ogMeta("/network-installation"),
 };
 
 const content = [
-  "Our professional network installation services provide comprehensive solutions for businesses and homes throughout Al Ain and Abu Dhabi. We specialize in designing and implementing reliable network infrastructures that ensure optimal performance and connectivity.",
-  "With our expertise in CAT 6 cable installation and structured cabling solutions, we create organized and efficient networks that can grow with your needs. Our technicians are certified and experienced in handling projects of all sizes, from small home offices to large enterprise environments.",
-  "We follow industry best practices and standards to deliver networks that offer maximum performance, reliability, and security. Every installation is meticulously planned and executed to minimize disruption to your operations."
+  "Our networking installation services cover everything between the router your provider installs and the devices that use it: cable runs, wall points, a patch panel, switches and access points. We plan, install, test and label these networks for villas, offices, shops and warehouses in Al Ain and Abu Dhabi.",
+  "Most jobs use CAT 6 cable. It carries 1 Gbps over the full 100 metres and 10 Gbps over shorter runs of about 55 metres. We use CAT 6A where a link needs 10 Gbps at full distance, for example to a server room or a home office with a NAS. We only fit solid pure copper cable. Copper-clad aluminium is cheaper, but it carries less power and is a poor choice for PoE cameras, access points and phones.",
+  "Every network is laid out as a star. Each wall point has its own cable back to one patch panel and switch, so a fault on one point never takes down the others. We keep each permanent link under 90 metres, which leaves room for patch cables inside the 100 metre limit, and we route data cable away from mains cable so it does not pick up interference.",
+  "Building type changes the method. Villas in Al Ain have block walls and large roof voids, so we run cable in conduit through the roof and drop it to each room, and we use UV-rated cable for any outdoor stretch. Between a main house and a guest annex or a warehouse unit, a fibre link removes the distance limit and keeps the buildings electrically separate. In towers and offices in Abu Dhabi we work to building management rules and use trunking where walls cannot be cut.",
+  "For offices and warehouses we build the rack as well: patch panel, PoE switch, cable management, and clear labels on both ends of every cable. The same network can carry IP cameras, VOIP phones and WiFi access points, so we size the switch for the devices you have now and leave spare ports for the ones you will add.",
+  "At handover you get the test results for each cable and a simple port map. That makes later changes quick, whether we do them or another technician does."
 ];
 
 const features = [
-  "Complete structured cabling solutions for new and existing buildings",
-  "CAT 6/6A/7 cable installation with proper testing and certification",
-  "Fiber optic backbone installation for high-speed data transfer",
-  "Network equipment setup including switches, routers, and access points",
-  "Server room design and implementation with proper cooling and power",
-  "Network documentation and labeling for easy maintenance",
-  "Scalable designs that accommodate future growth",
-  "Full compliance with industry standards and local regulations"
+  "Structured cabling for new and existing homes, offices and warehouses",
+  "CAT 6 and CAT 6A cable installation, tested end to end",
+  "Fiber optic links between buildings and to server rooms",
+  "Switch, patch panel, router and access point setup",
+  "PoE networks for IP cameras, VOIP phones and WiFi access points",
+  "Rack and server room layout with cable management",
+  "Labelled cables and a port map for easy maintenance",
+  "Spare capacity planned in so the network can grow"
 ];
 
 export default function NetworkInstallationPage() {
   return (
     <ServicePage
-      title="Professional Network Installation"
-      description={`Enterprise-grade network solutions with CAT 6 cable installation and structured cabling for businesses and homes in Al Ain and Abu Dhabi.`}
+      title="Networking Installation Services"
+      description={`CAT 6 and CAT 6A structured cabling, switches and racks for homes, offices and warehouses in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}
       imageUrl="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg"
       schemaData={serviceSchema({
-        name: "Professional Network Installation",
-        description: `Professional network installation services with CAT 6 cable installation and structured cabling solutions for businesses and homes in Al Ain and Abu Dhabi. Expert technicians and reliable service.`,
+        name: "Networking Installation Services",
+        description: `Networking installation services in Al Ain and Abu Dhabi: CAT 6 and CAT 6A structured cabling, switches, racks and PoE networks for homes, offices and warehouses.`,
         serviceType: "Network Installation",
       })}
     />
