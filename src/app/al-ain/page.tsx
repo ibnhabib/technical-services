@@ -282,6 +282,14 @@ export default function AlAinPage() {
                     How Al Ain&apos;s Heat Affects Outdoor CCTV Equipment
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/guides/network-cabling-al-ain-villas"
+                    className="text-primary hover:underline"
+                  >
+                    Network Cabling for Al Ain Villas
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

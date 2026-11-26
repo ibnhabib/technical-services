@@ -12,6 +12,7 @@ import { metadata as network } from "./network-installation/page";
 import { metadata as voip } from "./voip/page";
 import { metadata as cctvGuide } from "./guides/outdoor-cctv-heat-al-ain/page";
 import { metadata as wifiGuide } from "./guides/wifi-dead-zones-al-ain-villas/page";
+import { metadata as cablingGuide } from "./guides/network-cabling-al-ain-villas/page";
 
 const pages: [string, Metadata][] = [
   ["/", home],
@@ -26,6 +27,7 @@ const pages: [string, Metadata][] = [
   ["/voip", voip],
   ["/guides/outdoor-cctv-heat-al-ain", cctvGuide],
   ["/guides/wifi-dead-zones-al-ain-villas", wifiGuide],
+  ["/guides/network-cabling-al-ain-villas", cablingGuide],
 ];
 
 // The root layout adds " | Technical Services" to every title except the homepage's

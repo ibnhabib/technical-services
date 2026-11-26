@@ -14,6 +14,7 @@ const routes = [
   { path: "/voip", priority: 0.8 },
   { path: "/guides/wifi-dead-zones-al-ain-villas", priority: 0.6 },
   { path: "/guides/outdoor-cctv-heat-al-ain", priority: 0.6 },
+  { path: "/guides/network-cabling-al-ain-villas", priority: 0.6 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

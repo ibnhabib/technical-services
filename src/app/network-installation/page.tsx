@@ -39,6 +39,7 @@ export default function NetworkInstallationPage() {
       content={content}
       features={features}
       imageUrl="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg"
+      relatedGuide={{ href: "/guides/network-cabling-al-ain-villas", title: "Network Cabling for Al Ain Villas" }}
       schemaData={serviceSchema({
         name: "Networking Installation Services",
         description: `Networking installation services in Al Ain and Abu Dhabi: CAT 6 and CAT 6A structured cabling, switches, racks and PoE networks for homes, offices and warehouses.`,

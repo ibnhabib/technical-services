@@ -44,6 +44,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li><Link href="/guides/wifi-dead-zones-al-ain-villas" className="text-slate-600 hover:text-primary">WiFi Dead Zones in Al Ain Villas</Link></li>
               <li><Link href="/guides/outdoor-cctv-heat-al-ain" className="text-slate-600 hover:text-primary">Outdoor CCTV in Al Ain&apos;s Heat</Link></li>
+              <li><Link href="/guides/network-cabling-al-ain-villas" className="text-slate-600 hover:text-primary">Network Cabling for Al Ain Villas</Link></li>
             </ul>
           </div>
 
