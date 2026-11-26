@@ -29,9 +29,37 @@ describe("network cabling guide", () => {
 
   it("links to the service pages and the city page", () => {
     const h = hrefs(render(<NetworkCablingGuide />).container);
-    for (const p of ["/network-installation", "/ethernet", "/al-ain", "/guides/wifi-dead-zones-al-ain-villas"]) {
+    for (const p of ["/network-installation", "/ethernet", "/fiber-optic", "/wifi-setup", "/al-ain", "/guides/wifi-dead-zones-al-ain-villas"]) {
       expect(h).toContain(p);
     }
+  });
+
+  it("opens with the topic and the city in the first paragraph, and has real depth", () => {
+    const { container } = render(<NetworkCablingGuide />);
+    const intro = container.querySelector("h1 ~ p")?.textContent ?? "";
+    expect(intro).toMatch(/network cabling/i);
+    expect(intro).toMatch(/Al Ain/);
+    expect(String(metadata.description)).toMatch(/network cabling/i);
+    const t = container.textContent ?? "";
+    expect(t.split(/\s+/).filter(Boolean).length).toBeGreaterThanOrEqual(800);
+  });
+
+  it("has at least three FAQ questions as h3 under an h2", () => {
+    const { container } = render(<NetworkCablingGuide />);
+    const q = [...container.querySelectorAll("h3")].filter((e) => e.textContent?.endsWith("?"));
+    expect(q.length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("publishes Article, FAQPage and BreadcrumbList schema with dates", () => {
+    const { container } = render(<NetworkCablingGuide />);
+    const blocks = [...container.querySelectorAll('script[type="application/ld+json"]')].map((s) =>
+      JSON.parse(s.textContent ?? "{}"),
+    );
+    const types = blocks.map((b) => b["@type"]);
+    expect(types).toEqual(expect.arrayContaining(["Article", "FAQPage", "BreadcrumbList"]));
+    const article = blocks.find((b) => b["@type"] === "Article");
+    expect(article.datePublished).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    expect(article.dateModified).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
 
   it("is linked from the footer, the Al Ain page and the network installation page", () => {
