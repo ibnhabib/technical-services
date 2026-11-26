@@ -44,6 +44,17 @@ describe("network cabling guide", () => {
     expect(t.split(/\s+/).filter(Boolean).length).toBeGreaterThanOrEqual(800);
   });
 
+  it("shows a self-hosted photo with alt text and lists it in the Article schema", () => {
+    const { container } = render(<NetworkCablingGuide />);
+    const img = container.querySelector("img");
+    expect(img?.getAttribute("src")).toBe("/images/network-cabling-technician.jpg");
+    expect(img?.getAttribute("alt")?.length).toBeGreaterThan(20);
+    const article = [...container.querySelectorAll('script[type="application/ld+json"]')]
+      .map((s) => JSON.parse(s.textContent ?? "{}"))
+      .find((b) => b["@type"] === "Article");
+    expect(article.image).toBe("https://www.technicalservices.ae/images/network-cabling-technician.jpg");
+  });
+
   it("has at least three FAQ questions as h3 under an h2", () => {
     const { container } = render(<NetworkCablingGuide />);
     const q = [...container.querySelectorAll("h3")].filter((e) => e.textContent?.endsWith("?"));

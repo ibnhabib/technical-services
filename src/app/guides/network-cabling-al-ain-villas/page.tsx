@@ -10,6 +10,7 @@ const PATH = "/guides/network-cabling-al-ain-villas";
 const DESCRIPTION =
   "Plan network cabling for an Al Ain villa: wired points room by room, CAT 6 in conduit, fibre to a majlis or annex, and what to do before the walls close.";
 const PUBLISHED = "2026-11-26";
+const IMAGE = "/images/network-cabling-technician.jpg";
 
 export const metadata: Metadata = {
   title: "Network Cabling for Al Ain Villas",
@@ -41,6 +42,7 @@ const articleSchema = {
   "@type": "Article",
   headline: "Network Cabling for Al Ain Villas: A Room-by-Room Plan",
   description: DESCRIPTION,
+  image: `${SITE_URL}${IMAGE}`,
   datePublished: PUBLISHED,
   dateModified: PUBLISHED,
   author: { "@type": "Organization", name: "Technical Services" },
@@ -87,6 +89,14 @@ export default function NetworkCablingGuide() {
 
       <section className="py-8">
         <div className="container px-4 mx-auto">
+          <img
+            src={IMAGE}
+            alt="Technician connecting ethernet cables in a network rack"
+            width={1280}
+            height={853}
+            className="w-full max-w-3xl mx-auto rounded-lg mb-12 aspect-video object-cover"
+          />
+
           <div className="max-w-3xl mx-auto prose prose-lg">
             <h2>The short version</h2>
             <p>
