@@ -79,8 +79,10 @@ describe("accessibility basics", () => {
 });
 
 describe("analytics loading", () => {
-  it("loads GTM after the page is idle, not right after hydration", () => {
+  it("layout uses the interaction-based loader, not an inline GTM snippet", () => {
     const src = readFileSync(join(root, "src/app/layout.tsx"), "utf8");
-    expect(src).toMatch(/id="gtm-script"\s+strategy="lazyOnload"/);
+    expect(src).toMatch(/<AnalyticsLoader\s*\/>/);
+    expect(src).not.toMatch(/googletagmanager\.com\/gtm\.js/);
+    expect(src).toMatch(/googletagmanager\.com\/ns\.html\?id=GTM-KZ9VZMR7/);
   });
 });

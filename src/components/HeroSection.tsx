@@ -37,10 +37,10 @@ export function HeroSection() {
             <Wifi className="w-7 h-7 text-primary" />
             <span className="text-lg font-medium text-primary">Ethernet Installation Services</span>
           </div>
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl animate-slide-up">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             Expert Network Cabling & Fiber Optic Installation Services in Al Ain & Abu Dhabi
           </h1>
-          <p className="mx-auto mb-8 text-xl leading-relaxed text-slate-600 max-w-2xl animate-fade-in">
+          <p className="mx-auto mb-8 text-xl leading-relaxed text-slate-600 max-w-2xl">
             Same-Day WiFi Setup, NETGEAR Extender Installation, and Reliable Fiber Repairs
           </p>
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 justify-center">
