@@ -9,15 +9,17 @@ export function ServiceHero({ title, description, imageUrl }: ServiceHeroProps) 
     <section className="relative bg-gray-50 py-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-white/50 z-10"></div>
       <div className="absolute inset-0 fiber-lines"></div>
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-          opacity: 0.25,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-        }}
-      ></div>
+      <img
+        src={imageUrl}
+        srcSet={`${imageUrl.replace('-1600.webp', '-800.webp')} 800w, ${imageUrl} 1600w`}
+        sizes="100vw"
+        alt=""
+        width={1600}
+        height={1067}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover opacity-25"
+      />
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">

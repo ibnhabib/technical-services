@@ -41,7 +41,7 @@ export default function EthernetPage() {
       description={`Residential networking with high-speed ethernet cabling, home office and smart home wiring in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}
-      imageUrl="https://images.pexels.com/photos/2881232/pexels-photo-2881232.jpeg"
+      imageUrl="/images/hero/ethernet-1600.webp"
       relatedGuide={{ href: "/guides/wifi-dead-zones-al-ain-villas", title: "Fixing WiFi Dead Zones in Al Ain Villas" }}
       schemaData={serviceSchema({
         name: "Ethernet & Home Networking",

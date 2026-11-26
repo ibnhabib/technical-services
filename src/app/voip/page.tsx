@@ -36,7 +36,7 @@ export default function VoipPage() {
       description={`Advanced voice over IP telephony systems with business phone setup and call center solutions in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}
-      imageUrl="https://images.pexels.com/photos/17636234/pexels-photo-17636234/free-photo-of-ip-phone-in-data-center-room.jpeg"
+      imageUrl="/images/hero/voip-1600.webp"
       schemaData={serviceSchema({
         name: "VOIP Solutions",
         description: `Professional VOIP and telephony solutions for businesses in Al Ain and Abu Dhabi. We provide business phone system setup, cloud PBX integration, and comprehensive call center solutions.`,

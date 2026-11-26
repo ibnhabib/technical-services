@@ -36,7 +36,7 @@ export default function FiberOpticPage() {
       description={`Expert fiber optic installations and repairs with 24/7 emergency support for residential and commercial properties in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}
-      imageUrl="https://images.pexels.com/photos/4339335/pexels-photo-4339335.jpeg"
+      imageUrl="/images/hero/fiber-optic-1600.webp"
       schemaData={serviceSchema({
         name: "Fiber Optic Solutions",
         description: `Professional fiber optic installations and repairs in Al Ain and Abu Dhabi. Our expert technicians provide residential and commercial fiber solutions with 24/7 emergency support.`,

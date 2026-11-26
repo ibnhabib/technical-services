@@ -37,7 +37,7 @@ export default function CctvPage() {
       content={content}
       features={features}
       relatedGuide={{ href: "/guides/outdoor-cctv-heat-al-ain", title: "How Al Ain's Heat Affects Outdoor CCTV Equipment" }}
-      imageUrl="https://images.pexels.com/photos/96612/pexels-photo-96612.jpeg"
+      imageUrl="/images/hero/cctv-1600.webp"
       schemaData={serviceSchema({
         name: "CCTV Installation",
         description: `Professional CCTV and security camera installation services in Al Ain and Abu Dhabi. We provide HD and 4K camera systems with night vision and remote monitoring capabilities for homes and businesses.`,

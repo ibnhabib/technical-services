@@ -227,7 +227,7 @@ export default function NetworkCablingGuide() {
             </div>
             <p className="text-sm text-slate-500 mt-4">
               More on serving{" "}
-              <Link href="/al-ain" className="text-primary hover:underline">
+              <Link href="/al-ain" className="text-primary underline hover:no-underline">
                 Al Ain
               </Link>
             </p>

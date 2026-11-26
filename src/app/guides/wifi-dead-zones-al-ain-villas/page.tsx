@@ -56,7 +56,12 @@ export default function WifiDeadZonesGuide() {
             </AnswerBox>
           </div>
           <img
-            src="https://images.pexels.com/photos/32698507/pexels-photo-32698507.jpeg"
+            src="/images/hero/guide-wifi-dead-zones-1600.webp"
+            srcSet="/images/hero/guide-wifi-dead-zones-800.webp 800w, /images/hero/guide-wifi-dead-zones-1600.webp 1600w"
+            sizes="(min-width: 768px) 768px, 100vw"
+            width={1600}
+            height={1067}
+            fetchPriority="high"
             alt="Modern WiFi 6 router on a desk"
             className="w-full max-w-3xl mx-auto rounded-lg mb-12 aspect-video object-cover"
           />
@@ -123,7 +128,7 @@ export default function WifiDeadZonesGuide() {
             </div>
             <p className="text-sm text-slate-500 mt-4">
               More on serving{" "}
-              <Link href="/al-ain" className="text-primary hover:underline">
+              <Link href="/al-ain" className="text-primary underline hover:no-underline">
                 Al Ain
               </Link>
             </p>

@@ -56,7 +56,12 @@ export default function OutdoorCctvHeatGuide() {
             </AnswerBox>
           </div>
           <img
-            src="https://images.pexels.com/photos/11790823/pexels-photo-11790823.jpeg"
+            src="/images/hero/guide-outdoor-cctv-1600.webp"
+            srcSet="/images/hero/guide-outdoor-cctv-800.webp 800w, /images/hero/guide-outdoor-cctv-1600.webp 1600w"
+            sizes="(min-width: 768px) 768px, 100vw"
+            width={1600}
+            height={1067}
+            fetchPriority="high"
             alt="Outdoor security cameras mounted on the corner of a building"
             className="w-full max-w-3xl mx-auto rounded-lg mb-12 aspect-video object-cover"
           />
@@ -120,7 +125,7 @@ export default function OutdoorCctvHeatGuide() {
             </div>
             <p className="text-sm text-slate-500 mt-4">
               More on serving{" "}
-              <Link href="/al-ain" className="text-primary hover:underline">
+              <Link href="/al-ain" className="text-primary underline hover:no-underline">
                 Al Ain
               </Link>
             </p>

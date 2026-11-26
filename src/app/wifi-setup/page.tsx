@@ -37,7 +37,7 @@ export default function WifiSetupPage() {
       content={content}
       features={features}
       relatedGuide={{ href: "/guides/wifi-dead-zones-al-ain-villas", title: "Fixing WiFi Dead Zones in Al Ain Villas" }}
-      imageUrl="https://images.unsplash.com/photo-1531765408077-9a1f85f90df1?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&fm=webp"
+      imageUrl="/images/hero/wifi-setup-1600.webp"
       schemaData={serviceSchema({
         name: "WiFi & Networking Setup",
         description: `Professional WiFi installation and networking setup services in Al Ain and Abu Dhabi. We provide seamless wireless solutions for homes and businesses with NETGEAR extender optimization and IoT device integration.`,

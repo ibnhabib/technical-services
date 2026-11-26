@@ -91,7 +91,12 @@ export function Navbar() {
           </nav>
 
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-slate-700">
+            <button
+              onClick={toggleMenu}
+              className="text-slate-700"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
