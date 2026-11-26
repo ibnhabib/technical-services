@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/TrackedLink";
 import { PhoneCall } from "lucide-react";
 import { SITE_URL } from "@/lib/schema";
+import { AnswerBox } from "@/components/AnswerBox";
 
 export const metadata: Metadata = {
   title: "Fixing WiFi Dead Zones in Al Ain Villas",
@@ -49,6 +50,11 @@ export default function WifiDeadZonesGuide() {
 
       <section className="py-8">
         <div className="container px-4 mx-auto">
+          <div className="mb-8">
+            <AnswerBox>
+              A single router rarely covers an Al Ain villa because of thick masonry walls, several floors and a detached majlis. The usual fix is two or three mesh access points, joined by ethernet cable where possible, and placed after a walk through the villa instead of by trial and error.
+            </AnswerBox>
+          </div>
           <img
             src="https://images.pexels.com/photos/32698507/pexels-photo-32698507.jpeg"
             alt="Modern WiFi 6 router on a desk"

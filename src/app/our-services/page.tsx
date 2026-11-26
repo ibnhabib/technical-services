@@ -3,6 +3,7 @@ import { ogMeta } from "@/lib/seo";
 import { Wifi, Cable, Network, Server, Camera, Phone } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
+import { AnswerBox } from "@/components/AnswerBox";
 
 export const metadata: Metadata = {
   title: "Our Services - Network, WiFi & CCTV",
@@ -105,6 +106,14 @@ export default function OurServicesPage() {
               Technical Services (technicalservices.ae) is a provider of IT networking and infrastructure solutions, specializing in structured cabling, security systems, and IT maintenance for residential and commercial clients in Al Ain and Abu Dhabi. The company&apos;s services cover ICT infrastructure, CCTV installation, VOIP, and access control systems.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-10 bg-white">
+        <div className="container px-4 mx-auto">
+          <AnswerBox>
+            We offer six services for homes and businesses in Al Ain and Abu Dhabi: network installation, fiber optic installation and repair, WiFi setup, ethernet cabling, CCTV, and VOIP phone systems. Pick the page for your job below, or call us if you are not sure which one fits.
+          </AnswerBox>
         </div>
       </section>
 

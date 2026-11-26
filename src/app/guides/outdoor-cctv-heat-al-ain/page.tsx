@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/TrackedLink";
 import { PhoneCall } from "lucide-react";
 import { SITE_URL } from "@/lib/schema";
+import { AnswerBox } from "@/components/AnswerBox";
 
 export const metadata: Metadata = {
   title: "Outdoor CCTV in Al Ain's Heat",
@@ -49,6 +50,11 @@ export default function OutdoorCctvHeatGuide() {
 
       <section className="py-8">
         <div className="container px-4 mx-auto">
+          <div className="mb-8">
+            <AnswerBox>
+              Outdoor CCTV cameras in Al Ain need an IP66 or IP67 housing, shaded or ventilated mounting and sealed cable entries. Heat and dust cause most failures, and a camera that lasts 5 to 7 years in a milder climate can fail in about 18 months here if these are skipped.
+            </AnswerBox>
+          </div>
           <img
             src="https://images.pexels.com/photos/11790823/pexels-photo-11790823.jpeg"
             alt="Outdoor security cameras mounted on the corner of a building"

@@ -8,6 +8,10 @@ import WifiSetupPage from "./wifi-setup/page";
 import CctvPage from "./cctv/page";
 import FiberOpticPage from "./fiber-optic/page";
 import VoipPage from "./voip/page";
+import Home from "./page";
+import OurServicesPage from "./our-services/page";
+import OutdoorCctvHeatGuide from "./guides/outdoor-cctv-heat-al-ain/page";
+import WifiDeadZonesGuide from "./guides/wifi-dead-zones-al-ain-villas/page";
 
 afterEach(cleanup);
 
@@ -20,6 +24,10 @@ const pages: [string, () => React.ReactElement][] = [
   ["/cctv", () => <CctvPage />],
   ["/fiber-optic", () => <FiberOpticPage />],
   ["/voip", () => <VoipPage />],
+  ["/", () => <Home />],
+  ["/our-services", () => <OurServicesPage />],
+  ["/guides/outdoor-cctv-heat-al-ain", () => <OutdoorCctvHeatGuide />],
+  ["/guides/wifi-dead-zones-al-ain-villas", () => <WifiDeadZonesGuide />],
 ];
 
 describe.each(pages)("answer block on %s", (_path, page) => {

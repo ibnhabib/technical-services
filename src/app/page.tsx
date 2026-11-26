@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HeroSection } from "@/components/HeroSection";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { AnswerBox } from "@/components/AnswerBox";
 
 export const metadata: Metadata = {
   title: "Technical Services - Network & WiFi Installation in Al Ain",
@@ -98,6 +99,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection />
+      <section className="pt-10 bg-white">
+        <div className="container px-4 mx-auto">
+          <AnswerBox>
+            Technical Services installs network cabling, fiber optic, WiFi, ethernet, CCTV and VOIP for homes and businesses in Al Ain and Abu Dhabi. We are based in Al Ain and plan every job around the building. We cover new installations and repairs of slow or faulty networks.
+          </AnswerBox>
+        </div>
+      </section>
       <section className="py-20 bg-white">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
