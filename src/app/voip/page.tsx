@@ -32,6 +32,7 @@ export default function VoipPage() {
   return (
     <ServicePage
       title="VOIP Solutions"
+      answer="VOIP sends phone calls over your internet connection, so a business can run its phones on the same network as its computers. In Al Ain and Abu Dhabi we set up office phone systems and cloud PBX, configure call quality settings, handle number porting, and connect mobile phones for staff who work away from the desk."
       description={`Advanced voice over IP telephony systems with business phone setup and call center solutions in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

@@ -3,6 +3,7 @@ import { ogMeta } from "@/lib/seo";
 import { Wifi, Cable, Network, Server, Camera, Phone, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
+import { AnswerBox } from "@/components/AnswerBox";
 import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -158,6 +159,14 @@ export default function AlAinPage() {
               <span>Same-day call-outs across Al Ain</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-10 bg-white">
+        <div className="container px-4 mx-auto">
+          <AnswerBox>
+            We are based in Al Ain and install network cabling, WiFi, CCTV, fiber and VOIP in villas, shops and offices across the city. Each job starts with a look at the building, and the cable runs and equipment are planned around it. We usually schedule a same-day visit for standard installations.
+          </AnswerBox>
         </div>
       </section>
 

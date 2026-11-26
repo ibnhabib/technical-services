@@ -37,6 +37,7 @@ export default function EthernetPage() {
   return (
     <ServicePage
       title="Ethernet Cabling & Home Networking"
+      answer="Residential networking means running ethernet cable from one cabinet to a wall point in each room. For a villa or apartment in Al Ain or Abu Dhabi we install in-wall CAT 6 for TVs, desks, consoles and access points, so each device gets a steady 1 Gbps connection instead of sharing WiFi, and we label and test every cable."
       description={`Residential networking with high-speed ethernet cabling, home office and smart home wiring in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

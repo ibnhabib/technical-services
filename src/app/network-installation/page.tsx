@@ -35,6 +35,7 @@ export default function NetworkInstallationPage() {
   return (
     <ServicePage
       title="Networking Installation Services"
+      answer="Networking installation services in Al Ain and Abu Dhabi cover the cabling between your provider's router and your devices. We run solid copper CAT 6 or CAT 6A from a patch panel to a wall point in each room, keep every run under 90 metres, test each cable and give you a port map."
       description={`CAT 6 and CAT 6A structured cabling, switches and racks for homes, offices and warehouses in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

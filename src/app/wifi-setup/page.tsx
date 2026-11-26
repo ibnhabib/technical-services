@@ -32,6 +32,7 @@ export default function WifiSetupPage() {
   return (
     <ServicePage
       title="WiFi Installation & Networking Setup"
+      answer="WiFi installation is the work of placing routers and access points so coverage reaches every room. In Al Ain and Abu Dhabi we survey the property, set up routers, mesh systems and extenders, add a guest network, and run cable to access points where thick walls weaken the signal."
       description={`Seamless wireless solutions for optimal coverage in homes and offices across Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

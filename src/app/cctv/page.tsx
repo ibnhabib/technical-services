@@ -32,6 +32,7 @@ export default function CctvPage() {
   return (
     <ServicePage
       title="CCTV Installation"
+      answer="CCTV installation means fitting cameras, a recorder and remote viewing so you can watch your property from your phone. In Al Ain and Abu Dhabi we install HD and 4K cameras with night vision, set up the DVR or NVR, place cameras for the widest coverage, and use heat-rated housings for outdoor cameras in Al Ain's summers."
       description={`Professional security camera solutions for home and business with HD/4K cameras and remote monitoring in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

@@ -32,6 +32,7 @@ export default function FiberOpticPage() {
   return (
     <ServicePage
       title="Fiber Optic Solutions"
+      answer="Fiber optic work covers installing, splicing, testing and repairing fiber cable for homes and businesses in Al Ain and Abu Dhabi. We terminate fiber at your premises, repair cuts and dirty or damaged connectors, test every link, and offer 24/7 emergency support for outages."
       description={`Expert fiber optic installations and repairs with 24/7 emergency support for residential and commercial properties in Al Ain and Abu Dhabi.`}
       content={content}
       features={features}

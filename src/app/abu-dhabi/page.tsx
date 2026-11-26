@@ -3,6 +3,7 @@ import { ogMeta } from "@/lib/seo";
 import { Wifi, Cable, Network, Server, Camera, Phone, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
+import { AnswerBox } from "@/components/AnswerBox";
 import { citySchema, faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -147,6 +148,14 @@ export default function AbuDhabiPage() {
               <span>Call-outs across Abu Dhabi</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="pt-10 bg-white">
+        <div className="container px-4 mx-auto">
+          <AnswerBox>
+            We install and troubleshoot network cabling, WiFi, CCTV, fiber and VOIP for apartments, villas and offices in Abu Dhabi. Each job is planned around the building, from in-unit CAT 6 in apartments to riser and trunking work in commercial towers, and we schedule office installs around your operating hours and building management rules.
+          </AnswerBox>
         </div>
       </section>
 
